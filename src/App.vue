@@ -18,7 +18,7 @@ export default {
         return "上午";
       } else if (Number(time) > 12 && Number(time) < 18) {
         return "下午";
-      } else if (Number(time) > 18 && Number(time) < 24) {
+      } else if (Number(time) >= 18 && Number(time) < 24) {
         return "晚上";
       } else if (Number(time) == 12) {
         return "中午";

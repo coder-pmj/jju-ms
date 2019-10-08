@@ -13,7 +13,7 @@
     </el-form-item>
 
     <el-form-item>
-      <a href="http://localhost:8800/#/login">用户登录</a>
+      <a href="http://www.pmj136.top:8800/login">用户登录</a>
     </el-form-item>
 
     <el-form-item>

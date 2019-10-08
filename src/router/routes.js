@@ -12,7 +12,8 @@ const routes = [
         path: '/login',
         component: Login,
         meta: {
-            title: '管理员登录'
+            title: '管理员登录',
+            keepAlive:false
         }
     },
 
@@ -39,7 +40,11 @@ const routes = [
         children: [
             {
                 path: '/',
-                component: UserList
+                component: UserList,
+                meta: {
+                    title: '用户列表',
+                    keepAlive:false
+                }
             }
         ]
     },
@@ -50,7 +55,11 @@ const routes = [
         children: [
             {
                 path: '/',
-                component: StudentList
+                component: StudentList,
+                meta: {
+                    title: '学生列表',
+                    keepAlive:false
+                }
             }
         ]
     },

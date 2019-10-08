@@ -43,8 +43,7 @@ export default {
   created() {
     this.getData();
   },
- 
-  
+
   methods: {
     getData() {
       axios
@@ -52,6 +51,7 @@ export default {
         .then(res => {
           const resp = res.data;
           this.tableData = resp.data;
+          console.log(this.tableData);
         })
         .catch(err => {
           console.error(err);
@@ -62,6 +62,7 @@ export default {
       if (this.flagYes) {
         this.flagYes = false;
         d.date = this.getTime();
+
         axios
           .post("/api/admin/handleyes", d)
           .then(res => {
@@ -75,6 +76,7 @@ export default {
                   date: this.getTime(),
                   content: this.msg,
                   obj: d.title,
+                  sno: d.sno,
                   sendfrom: "系统"
                 })
                 .then(res => {
